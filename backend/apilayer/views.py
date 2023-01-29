@@ -42,4 +42,4 @@ def deleteNote(request, pk):
     data = request.data 
     note = models.Notes.objects.get(id = pk)
     note.delete()
-    return Response 
+    return Response("Note successfully deleted.")
