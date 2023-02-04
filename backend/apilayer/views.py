@@ -23,7 +23,7 @@ def createNewNote(request):
     note = models.Notes.objects.create(
         title = data["title"],
         body = data["body"]
-    ) # how to create a new note without using the create function? 
+    ) 
     serializer = serializers.NotesSerializer(note, many=False)
     return Response( serializer.data )
     

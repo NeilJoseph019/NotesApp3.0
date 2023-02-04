@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 const IndividualNotes = () => {
   return (
     <Card style={{ width: '35rem', height: '35rem' }}>
-        <Card.Header> <h4>Enter note details :</h4> </Card.Header>
+        <Card.Header> <h4>Note details :</h4> </Card.Header>
         <LinkContainer to="/">
             <Button variant="outline-primary">Back</Button>
         </LinkContainer>
@@ -21,8 +21,8 @@ const IndividualNotes = () => {
                         />
                 </InputGroup>
                 <InputGroup className='mt-3'>
-                    <InputGroup.Text>With textarea</InputGroup.Text>
-                    <Form.Control as="textarea" aria-label="With textarea" />
+                    <InputGroup.Text>Description</InputGroup.Text>
+                    <Form.Control as="textarea" aria-label="description" placeholder='Type the body of the note here....' />
                 </InputGroup>
                 <Container as={"div"} className='mt-5 ms-5' >
                     <Button variant="outline-success" className='me-5'>Done</Button>

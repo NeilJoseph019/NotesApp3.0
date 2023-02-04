@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, ListGroup, ListGroupItem, Badge } from 'react-bootstrap'
+import { Card, ListGroup, ListGroupItem, Badge, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const HomePage = () => {
   return (
@@ -10,6 +11,9 @@ const HomePage = () => {
                 <Badge bg="dark"  style={{float:'right'}}>1</Badge>
             </h4>
         </Card.Header>
+        <LinkContainer to="/create-new-note">
+            <Button variant="outline-primary">New Note</Button>
+        </LinkContainer>
         <ListGroup as={"ol"}  numbered variant='flush'>
             
             <ListGroupItem as={"li"} className="d-flex align-items-center" action>
