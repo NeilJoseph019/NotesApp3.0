@@ -30,12 +30,14 @@ const HomePage = () => {
         <LinkContainer to="/create-new-note">
             <Button variant="outline-primary">New Note</Button>
         </LinkContainer>
+        <div style={{ height: '30rem', overflowY: 'auto' }}>
+
         <ListGroup as={"ol"}  numbered variant='flush'>
             {loading && ( <ListGroupItem>Loading notes...</ListGroupItem>)}
             {errors && (  <ListGroupItem className="text-danger">{errors}</ListGroupItem> )}
             
             {notes.length < 0 && (
-            <ListGroupItem as={"li"} className="d-flex align-items-center" action>
+                <ListGroupItem as={"li"} className="d-flex align-items-center" action>
                 <Link to="/note:1" style={{ color: 'inherit', textDecoration: 'none' }}>
                     <Card.Title className="text-right mx-2" >New Note</Card.Title>
                 </Link>
@@ -44,7 +46,7 @@ const HomePage = () => {
 
             {notes.length > 0 &&
           notes.map((note) => (
-            <ListGroupItem key={note.id} as={"li"} className="d-flex align-items-center" action>
+              <ListGroupItem key={note.id} as={"li"} className="d-flex align-items-center" action>
                 <Link to="/note:1" style={{ color: 'inherit', textDecoration: 'none' }}>
                     <Card.Title className="text-right mx-2" >{note.title}</Card.Title>
                 </Link>
@@ -52,6 +54,7 @@ const HomePage = () => {
             </ListGroupItem> ))}
          
         </ListGroup>
+        </div>
     </Card>
   )
 }
