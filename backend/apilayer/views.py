@@ -14,7 +14,7 @@ def viewAllNotes(request):
 def viewIndividualNote(request, pk):
     note = models.Notes.objects.get(id=pk)
     serializer = serializers.NotesSerializer(note, many=False)
-    return Response
+    return Response(serializer.data)
 
 
 @api_view(["POST"])

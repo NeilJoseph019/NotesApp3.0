@@ -3,9 +3,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from "axios"
 
 const initialState = {
-  loading: false,
-  notes: [],
-  errors: ""
+    notes: [],
+    loading: false,
+    errors: ""
 };
 
 // Thunk to fetch all notes
